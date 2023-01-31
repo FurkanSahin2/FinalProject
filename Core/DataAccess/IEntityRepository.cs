@@ -1,11 +1,12 @@
-﻿using Entities.Abstract;
+﻿using Core.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Text;
 
-namespace DataAccess.Abstract  
+namespace Core.DataAccess 
 {
+    // Not: 'Core' katmanı diğer katmanları referans almaz. Çünkü Core katmanı bağımsız olmalıdır.
 
     // generic constraint => Jenerik Kısıt
     // Amacımız, sistemimizin gerçekten veri tabanı nesneleriyle çalışmasını sağlamaktır.
