@@ -21,49 +21,49 @@ namespace WebAPI.Controllers
         // naming convention --> İsimlendirme standartı
         // IoC Container --> Inversion of control (Değişimin kontrolü)
 
-        IProductService _productService;
+        //IProductService _productService;
 
-        public ProductsController(IProductService productService)
-        {
-            _productService = productService;
-        }
+        //public ProductsController(IProductService productService)
+        //{
+        //    _productService = productService;
+        //}
 
-        [HttpGet("getall")]
-        public IActionResult GetAll()
-        {
-            var result = _productService.GetAll();
-            if (result.Success)
-            {
-                return Ok(result);
-            }
-            return BadRequest(result);
-        }
-
-
-        [HttpGet("getbyid")]
-
-        public IActionResult GetById(int id)
-        {
-            var result = _productService.GetById(id);
-            if (result.Success)
-            {
-                return Ok(result);
-            }
-            return BadRequest(result);
-        }
+        //[HttpGet("getall")]
+        //public IActionResult GetAll()
+        //{
+        //    var result = _productService.GetAll();
+        //    if (result.Success)
+        //    {
+        //        return Ok(result);
+        //    }
+        //    return BadRequest(result);
+        //}
 
 
-        [HttpPost("add")]
+        //[HttpGet("getbyid")]
 
-        public IActionResult Add(Product product)
-        {
-            var result = _productService.Add(product);
-            if (result.Success == true)
-            {
-                return Ok(result);
-            }
-            return BadRequest(result);
-        }
+        //public IActionResult GetById(int id)
+        //{
+        //    var result = _productService.GetById(id);
+        //    if (result.Success)
+        //    {
+        //        return Ok(result);
+        //    }
+        //    return BadRequest(result);
+        //}
+
+
+        //[HttpPost("add")]
+
+        //public IActionResult Add(Product product)
+        //{
+        //    var result = _productService.Add(product);
+        //    if (result.Success == true)
+        //    {
+        //        return Ok(result);
+        //    }
+        //    return BadRequest(result);
+        //}
 
         //[HttpPost("delete")]
 
@@ -76,5 +76,17 @@ namespace WebAPI.Controllers
         //    }
         //    return BadRequest(result);
         //}
+
+        [HttpGet]
+        public List<Product> Get()
+        {
+            IProductService productService = new ProductManager(new EfProductDal());
+            var result = productService.GetAll();
+            return result.Data;
+
+            
+        }
+
     }
 }
+
