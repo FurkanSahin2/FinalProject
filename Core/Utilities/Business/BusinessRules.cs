@@ -19,5 +19,20 @@ namespace Core.Utilities.Business
 
             return null;
         }
+
+        // Vers_2: 
+
+        //public static List<IResult> Run_2(params IResult[] locigs_2)
+        //{
+        //    List<IResult> errorResults = new List<IResult>();
+        //    foreach (var logic_2 in locigs_2)
+        //    {
+        //        if (!logic_2.Success)
+        //        {
+        //            errorResults.Add(logic_2);
+        //        }
+        //    }
+        //    return errorResults;
+        //}
     }
 }

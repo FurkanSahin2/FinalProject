@@ -14,4 +14,3 @@ namespace DataAccess.Abstract
     }
 }
 
-// Cod Refactoring
