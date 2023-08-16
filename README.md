@@ -31,8 +31,7 @@ Bir Framework katmanı olan **Core Katmanı**'nda **DataAccess**, **Entities**, 
 
 ![databaseandtables](https://user-images.githubusercontent.com/16624085/117002547-58fa7380-acec-11eb-9d13-9b8ac5f4532b.png)
 ###  Veritabanı Entegrasyonu  
-Prototip E- Ticaret Projemiz **Northwind Database** ile çalışmaktadır. İlgili veritabanını sistemimize entegre etmek için **Visual Studio 2022**'de *View > SQL Server Object Explorer* menü yolunu takip edebilirsiniz. Pencere açıldıktan sonra *SQL Server > (localdb)MSSQLLocalDB* altındaki **Databases** klasörüne sağ tıkladıktan sonra, 
-**Add New Database** seçeneğine tıklayıp içerisine _https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/databases/northwind-pubs/instnwnd.sql_ adresinden kopyaladığınız veritabanını yapıştırarak veritabanınızı update edebilirsiniz. 
+Prototip E- Ticaret Projemiz **Northwind Database** ile çalışmaktadır. İlgili veritabanını sistemimize entegre etmek için **Visual Studio 2022**'de *View > SQL Server Object Explorer* menü yolunu takip edebilirsiniz. Pencere açıldıktan sonra *SQL Server > (localdb)MSSQLLocalDB* altındaki **Databases** klasörüne sağ tıkladıktan sonra, **Add New Database** seçeneğine tıklayıp içerisine <code>_https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/databases/northwind-pubs/instnwnd.sql_ </code> adresinden kopyaladığınız veritabanını yapıştırarak veritabanınızı update edebilirsiniz. 
 <br>
 <br>
 <br>
