@@ -1,5 +1,4 @@
 # FinalProject
-# CarRentalProject
 
 ## :pushpin: Getting Started
 ![About](https://user-images.githubusercontent.com/16624085/117002846-c27a8200-acec-11eb-98bb-0316777e8a05.png)
