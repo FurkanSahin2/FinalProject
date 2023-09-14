@@ -9,6 +9,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 
 namespace WebAPI.Controllers
 {
@@ -30,6 +31,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpGet("getall")]
+        
         public IActionResult GetAll()
         {
             var result = _productService.GetAll();
@@ -38,6 +40,18 @@ namespace WebAPI.Controllers
                 return Ok(result);
             }
             return BadRequest(result);
+        }
+
+        [HttpGet("getallbycategoryid")]
+        public IActionResult GetAllByCategoryId(int categoryId)
+        {
+            var result = _productService.GetAllByCategoryId(categoryId);
+            if (result.Success)
+            {
+                return Ok(result.Data);
+            }
+
+            return BadRequest(result.Message);
         }
 
         [HttpGet("getbyid")]
@@ -63,6 +77,30 @@ namespace WebAPI.Controllers
                 return Ok(result);
             }
             return BadRequest(result);
+        }
+
+        [HttpPost("update")]
+        public IActionResult Update(Product product)
+        {
+            var result = _productService.Update(product);
+            if (result.Success)
+            {
+                return Ok(result.Message);
+            }
+
+            return BadRequest(result.Message);
+        }
+
+        [HttpPost("transaction")]
+        public IActionResult AddTransactionTest(Product product)
+        {
+            var result = _productService.AddTransactionTest(product);
+            if (result.Success)
+            {
+                return Ok(result.Message);
+            }
+
+            return BadRequest(result.Message);
         }
     }
 }
