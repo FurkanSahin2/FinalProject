@@ -139,13 +139,10 @@ namespace Business.Concrete
 
             return new SuccessResult();
         }
+
         [TransactionScopeAspect]
         public IResult AddTransactionTest(Product product)
         {
-            using (TransactionScope scope = new TransactionScope())
-            {
-
-            }
             Add(product);
 
             if (product.UnitPrice < 10)
