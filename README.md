@@ -60,4 +60,9 @@ Prototip E- Ticaret Projemiz **Northwind Database** ile çalışmaktadır. İlgi
 - Transaction
 
 - Performance
+  
+- Log
+  
+- Exception Handling
+   
 - ...
