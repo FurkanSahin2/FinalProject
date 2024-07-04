@@ -9,6 +9,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Transactions;
 using Business.BusinessAspects.Autofac;
 using Business.CCS;
@@ -79,6 +80,7 @@ namespace Business.Concrete
         [LogAspect(typeof(Core.CrossCuttingConcerns.Logging.Log4Net.Loggers.DatabaseLogger))]
         public IDataResult<Product> GetById(int productId)
         {
+            // Thread.Sleep(5000);
             return new SuccessDataResult<Product>(_productDal.Get(p => p.ProductId == productId));
         }
 
