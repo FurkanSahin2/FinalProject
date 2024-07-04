@@ -6,7 +6,7 @@
 ## :books:Layers  
 ![entitieslayer](https://user-images.githubusercontent.com/16624085/117002898-d3c38e80-acec-11eb-8b57-0f77c41030ae.png)
 ### Entities Layer
-Veritabanı nesneleri için oluşturulmuş **Entities Katmanı**'nda **Abstract** ve **Concrete** olmak üzere iki adet klasör bulunmaktadır. Abstract klasörü soyut nesneleri, Concrete klasörü somut nesneleri tutmak için oluşturulmuştur.  
+Veritabanı nesneleri için oluşturulmuş **Entities Katmanı**'nda **DTO's** ve **Concrete** olmak üzere iki adet klasör bulunmaktadır. DTO's klasörü veri aktarım dosyalarını, Concrete klasörü ise somut nesneleri tutmak için oluşturulmuştur.  
 <br>
 ![BusinessLayer](https://user-images.githubusercontent.com/16624085/117002936-e211aa80-acec-11eb-86a8-23bd1a9219e8.png)
 <br>
@@ -60,4 +60,9 @@ Prototip E- Ticaret Projemiz **Northwind Database** ile çalışmaktadır. İlgi
 - Transaction
 
 - Performance
+  
+- Log
+  
+- Exception Handling
+   
 - ...
